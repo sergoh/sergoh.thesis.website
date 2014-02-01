@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WcfServiceLibrary" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WsTesting" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWcfServiceLibrary_ChilkataSimpleCrawler_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChilkataSimpleCrawler" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ChilkataSimpleCrawler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChilkataSimpleCrawlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ChilkatCrawler_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChilkatCrawler" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ChilkatCrawler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChilkatCrawlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_SimpleCrawler_InputMessage">
+    <wsdl:part name="parameters" element="tns:SimpleCrawler" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_SimpleCrawler_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SimpleCrawlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetUrlString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUrlString" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetUrlString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUrlStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsTesting_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsTesting" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsTesting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsTestingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsdlAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsdlAddress" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsdlAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsdlAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsdlDiscovery_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsdlDiscovery" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsdlDiscovery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsdlDiscoveryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsOperations_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsOperations" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsOperations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperations" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationsTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsTable" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationsTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParametersTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersTable" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParametersTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParametersList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersList" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParametersList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParameters" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationSoapParameters_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationSoapParameters" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationSoapParameters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationSoapParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParametersWithProtocol_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersWithProtocol" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetOperationParametersWithProtocol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationParametersWithProtocolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsValues" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsReflectionTesting_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsReflectionTesting" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsReflectionTesting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsReflectionTestingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsComplexReflectionTesting_InputMessage">
+    <wsdl:part name="parameters" element="tns:WsComplexReflectionTesting" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_WsComplexReflectionTesting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WsComplexReflectionTestingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanWeb_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScanWeb" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanWeb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScanWebResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanBing_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScanBing" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanBing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScanBingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanRepository_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScanRepository" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanRepository_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScanRepositoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanRepositoryTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScanRepositoryTable" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanRepositoryTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScanRepositoryTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanRepositoryWs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScanRepositoryWs" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_ScanRepositoryWs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScanRepositoryWsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetDocumentation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentation" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_GetDocumentation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_AddSingleWebserviceBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSingleWebserviceBase" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_AddSingleWebserviceBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSingleWebserviceBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_MergeWebserviceBaseList_InputMessage">
+    <wsdl:part name="parameters" element="tns:MergeWebserviceBaseList" />
+  </wsdl:message>
+  <wsdl:message name="IWcfServiceLibrary_MergeWebserviceBaseList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MergeWebserviceBaseListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWcfServiceLibrary">
+    <wsdl:operation name="ChilkataSimpleCrawler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ChilkataSimpleCrawler" message="tns:IWcfServiceLibrary_ChilkataSimpleCrawler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ChilkataSimpleCrawlerResponse" message="tns:IWcfServiceLibrary_ChilkataSimpleCrawler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChilkatCrawler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ChilkatCrawler" message="tns:IWcfServiceLibrary_ChilkatCrawler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ChilkatCrawlerResponse" message="tns:IWcfServiceLibrary_ChilkatCrawler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SimpleCrawler">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/SimpleCrawler" message="tns:IWcfServiceLibrary_SimpleCrawler_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/SimpleCrawlerResponse" message="tns:IWcfServiceLibrary_SimpleCrawler_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetUrlString" message="tns:IWcfServiceLibrary_GetUrlString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetUrlStringResponse" message="tns:IWcfServiceLibrary_GetUrlString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsTesting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsTesting" message="tns:IWcfServiceLibrary_WsTesting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsTestingResponse" message="tns:IWcfServiceLibrary_WsTesting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsdlAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsdlAddress" message="tns:IWcfServiceLibrary_WsdlAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsdlAddressResponse" message="tns:IWcfServiceLibrary_WsdlAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsdlDiscovery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsdlDiscovery" message="tns:IWcfServiceLibrary_WsdlDiscovery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsdlDiscoveryResponse" message="tns:IWcfServiceLibrary_WsdlDiscovery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsOperations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsOperations" message="tns:IWcfServiceLibrary_WsOperations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsOperationsResponse" message="tns:IWcfServiceLibrary_WsOperations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperations" message="tns:IWcfServiceLibrary_GetOperations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationsResponse" message="tns:IWcfServiceLibrary_GetOperations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationsTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationsTable" message="tns:IWcfServiceLibrary_GetOperationsTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationsTableResponse" message="tns:IWcfServiceLibrary_GetOperationsTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParametersTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersTable" message="tns:IWcfServiceLibrary_GetOperationParametersTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersTableResponse" message="tns:IWcfServiceLibrary_GetOperationParametersTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParametersList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersList" message="tns:IWcfServiceLibrary_GetOperationParametersList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersListResponse" message="tns:IWcfServiceLibrary_GetOperationParametersList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParameters" message="tns:IWcfServiceLibrary_GetOperationParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersResponse" message="tns:IWcfServiceLibrary_GetOperationParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationSoapParameters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationSoapParameters" message="tns:IWcfServiceLibrary_GetOperationSoapParameters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationSoapParametersResponse" message="tns:IWcfServiceLibrary_GetOperationSoapParameters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParametersWithProtocol">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersWithProtocol" message="tns:IWcfServiceLibrary_GetOperationParametersWithProtocol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersWithProtocolResponse" message="tns:IWcfServiceLibrary_GetOperationParametersWithProtocol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsValues" message="tns:IWcfServiceLibrary_WsValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsValuesResponse" message="tns:IWcfServiceLibrary_WsValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsReflectionTesting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsReflectionTesting" message="tns:IWcfServiceLibrary_WsReflectionTesting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsReflectionTestingResponse" message="tns:IWcfServiceLibrary_WsReflectionTesting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WsComplexReflectionTesting">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsComplexReflectionTesting" message="tns:IWcfServiceLibrary_WsComplexReflectionTesting_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/WsComplexReflectionTestingResponse" message="tns:IWcfServiceLibrary_WsComplexReflectionTesting_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScanWeb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanWeb" message="tns:IWcfServiceLibrary_ScanWeb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanWebResponse" message="tns:IWcfServiceLibrary_ScanWeb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScanBing">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanBing" message="tns:IWcfServiceLibrary_ScanBing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanBingResponse" message="tns:IWcfServiceLibrary_ScanBing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScanRepository">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanRepository" message="tns:IWcfServiceLibrary_ScanRepository_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryResponse" message="tns:IWcfServiceLibrary_ScanRepository_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScanRepositoryTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryTable" message="tns:IWcfServiceLibrary_ScanRepositoryTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryTableResponse" message="tns:IWcfServiceLibrary_ScanRepositoryTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScanRepositoryWs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryWs" message="tns:IWcfServiceLibrary_ScanRepositoryWs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryWsResponse" message="tns:IWcfServiceLibrary_ScanRepositoryWs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetDocumentation" message="tns:IWcfServiceLibrary_GetDocumentation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/GetDocumentationResponse" message="tns:IWcfServiceLibrary_GetDocumentation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSingleWebserviceBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/AddSingleWebserviceBase" message="tns:IWcfServiceLibrary_AddSingleWebserviceBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/AddSingleWebserviceBaseResponse" message="tns:IWcfServiceLibrary_AddSingleWebserviceBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeWebserviceBaseList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWcfServiceLibrary/MergeWebserviceBaseList" message="tns:IWcfServiceLibrary_MergeWebserviceBaseList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWcfServiceLibrary/MergeWebserviceBaseListResponse" message="tns:IWcfServiceLibrary_MergeWebserviceBaseList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IWcfServiceLibrary" type="tns:IWcfServiceLibrary">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChilkataSimpleCrawler">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ChilkataSimpleCrawler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChilkatCrawler">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ChilkatCrawler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimpleCrawler">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/SimpleCrawler" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUrlString">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetUrlString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsTesting">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsTesting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsdlAddress">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsdlAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsdlDiscovery">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsdlDiscovery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsOperations">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperations">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationsTable">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperationsTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParametersTable">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParametersList">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParameters">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperationParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationSoapParameters">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperationSoapParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperationParametersWithProtocol">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetOperationParametersWithProtocol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsValues">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsReflectionTesting">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsReflectionTesting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WsComplexReflectionTesting">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/WsComplexReflectionTesting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScanWeb">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ScanWeb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScanBing">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ScanBing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScanRepository">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ScanRepository" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScanRepositoryTable">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScanRepositoryWs">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/ScanRepositoryWs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentation">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/GetDocumentation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSingleWebserviceBase">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/AddSingleWebserviceBase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MergeWebserviceBaseList">
+      <soap:operation soapAction="http://tempuri.org/IWcfServiceLibrary/MergeWebserviceBaseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WcfServiceLibrary">
+    <wsdl:port name="BasicHttpBinding_IWcfServiceLibrary" binding="tns:BasicHttpBinding_IWcfServiceLibrary">
+      <soap:address location="http://localhost:55992/WCFServiceLibrary.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd0" filename="WCFServiceLibrary.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd1" filename="WCFServiceLibrary0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:55992/WCFServiceLibrary.svc?wsdl" filename="WcfServiceLibrary.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd4" filename="WCFServiceLibrary1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd3" filename="WCFServiceLibrary2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:55992/WCFServiceLibrary.svc?xsd=xsd2" filename="WCFServiceLibrary3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://localhost:55992/WCFServiceLibrary.svc?disco" filename="WCFServiceLibrary.disco" />
+  </Results>
+</DiscoveryClientResultsFile>
