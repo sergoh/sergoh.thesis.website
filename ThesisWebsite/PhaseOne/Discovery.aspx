@@ -12,9 +12,10 @@
             <asp:TextBox ID="txtTopic1" runat="server">.wsdl,.php?wsdl,.svc?wsdl,.asmx?wsdl</asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
             <br />--%>
-            <center><asp:Button ID="btnWebFocus" runat="server" OnClick="btnWebFocus_Click" Text="Search Bing" /></center>
+            <center><asp:Button ID="btnWebFocus" runat="server" OnClick="btnWebFocus_Click" Text="Search Bing" /><asp:Button ID="btnGoogle"  runat="server"  Text="Search Google" /><asp:Button ID="btnYahoo"  runat="server" OnClick="btnYahoo_Click"  Text="Search Yahoo" /></center>
             <br />
             <asp:Label ID="lblWeb" runat="server"></asp:Label>
+            <asp:Label ID="lblYahoo" runat="server"></asp:Label>
         </div>
     </article>
 </asp:Content>
